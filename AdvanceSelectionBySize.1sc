@@ -1,0 +1,13 @@
+//------------------------------------------------
+//--- 010 Editor v11.0.1 Script File
+//
+//      File: AdvanceSelectionBySize.1sc
+//   Authors: Rhett
+//   Version: 0.1
+//   Purpose: Advance selection by size of current selection.
+//  Category: Utility
+//------------------------------------------------
+
+int64 select_size = GetSelSize();
+int64 select_start = GetSelStart();
+SetSelection(select_start + select_size, select_size);

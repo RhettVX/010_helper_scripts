@@ -1,0 +1,21 @@
+//------------------------------------------------
+//--- 010 Editor v10.0 Script File
+//
+//      File: CopyCursorPos.1sc
+//   Authors: Rhett
+//   Version: 0.1
+//   Purpose: Copy the address at the cursor's position to the clipboard.
+//  Category: Clipboard
+//------------------------------------------------
+
+void CopyCursorPos() {
+    local uint64 pos = GetCursorPos();
+
+    string str;
+    SPrintf( str, "%d", pos );
+    CopyStringToClipboard( str );
+
+    Printf( "Cursor Pos: %d [%xh]\n", pos, pos );
+}
+
+CopyCursorPos();
